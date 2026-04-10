@@ -553,7 +553,12 @@
     }
 
     /* ── LEADERSHIP ── */
-    #leadership { background: var(--cream); }
+    #leadership { background: var(--cream); text-align: center; }
+
+    .leadership-cards-wrap {
+      display: flex;
+      justify-content: center;
+    }
 
     .leadership-card {
       background: var(--white);
@@ -564,7 +569,9 @@
       grid-template-columns: auto 1fr;
       gap: 1.6rem;
       align-items: start;
-      max-width: 800px;
+      max-width: 780px;
+      width: 100%;
+      text-align: left;
     }
 
     .leadership-icon {
@@ -595,6 +602,35 @@
       font-size: 0.92rem;
       color: var(--text-mid);
       line-height: 1.7;
+    }
+
+    /* ── INVOLVEMENT ITEMS ── */
+    .involvement-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.9rem;
+      background: var(--cream);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      padding: 0.85rem 1.1rem;
+    }
+
+    .inv-icon {
+      font-size: 1.1rem;
+      margin-top: 0.1rem;
+      flex-shrink: 0;
+    }
+
+    .inv-name {
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--navy);
+    }
+
+    .inv-role {
+      font-size: 0.78rem;
+      color: var(--text-light);
+      margin-top: 0.1rem;
     }
 
     /* ── CERTIFICATIONS ── */
@@ -729,9 +765,9 @@
       Junior ECE student with hands-on experience in IC design, FPGA development, embedded systems, and hardware bring-up. Incoming EE Intern at Flock Safety.
     </p>
     <div class="hero-ctas">
-      <a href="/cdn-cgi/l/email-protection#452f2021246b2d6b322c29292c2428360533242b212037272c29316b202130" class="btn-primary">✉ Email Me</a>
-      <a href="https://www.linkedin.com/in/jedawilliams-2641a727b" target="_blank" class="btn-outline">LinkedIn</a>
-      <a href="#" class="btn-outline" onclick="alert('Attach your resume PDF here!')">Resume ↓</a>
+      <a href="mailto:jeda.h.williams@vanderbilt.edu" class="btn-primary">Email Me</a>
+      <a href="https://www.linkedin.com/in/jeda-williams-2641a727b/" target="_blank" class="btn-outline">LinkedIn</a>
+      <a href="/Williams_Jeda_Resume_Public.pdf" class="btn-outline">Resume ↓</a>
     </div>
   </div>
 
@@ -778,9 +814,43 @@
   <div>
     <div class="section-label">Involvement</div>
     <h2 class="section-title" style="margin-bottom:1.5rem;">Campus &amp;<br/>Community</h2>
-    <p style="font-size:0.95rem;line-height:1.8;color:var(--text-mid);">
-      Theta Tau Engineering Fraternity (Lead Professional Development Chair) · National Society of Black Engineers · IEEE · Vanderbilt Volunteers for Science · SCALE · 'Dore for a Day Representative · Crescere Aude Scholar
-    </p>
+    <div style="display:flex;flex-direction:column;gap:0.85rem;">
+      <div class="involvement-item">
+        <span class="inv-icon">⚙️</span>
+        <div>
+          <div class="inv-name">Theta Tau Engineering Fraternity</div>
+          <div class="inv-role">Lead Professional Development Chair</div>
+        </div>
+      </div>
+      <div class="involvement-item">
+        <span class="inv-icon">✊</span>
+        <div>
+          <div class="inv-name">National Society of Black Engineers</div>
+          <div class="inv-role">Member</div>
+        </div>
+      </div>
+      <div class="involvement-item">
+        <span class="inv-icon">⚡</span>
+        <div>
+          <div class="inv-name">IEEE</div>
+          <div class="inv-role">Member</div>
+        </div>
+      </div>
+      <div class="involvement-item">
+        <span class="inv-icon">🔬</span>
+        <div>
+          <div class="inv-name">Vanderbilt Volunteers for Science</div>
+          <div class="inv-role">Advancing Science Education for Nashville's Future Leaders</div>
+        </div>
+      </div>
+      <div class="involvement-item">
+        <span class="inv-icon">🎓</span>
+        <div>
+          <div class="inv-name">Crescere Aude Scholar</div>
+          <div class="inv-role">SCALE · 'Dore for a Day Representative</div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -933,7 +1003,7 @@
   <div class="timeline">
 
     <div class="timeline-item">
-      <div class="timeline-date">April 2026 – Present</div>
+      <div class="timeline-date">May 2026 – August 2026</div>
       <div class="timeline-role">Electrical Engineering Intern</div>
       <div class="timeline-company">Flock Safety · Atlanta, GA</div>
       <ul class="timeline-bullets">
@@ -977,9 +1047,10 @@
 
 <!-- LEADERSHIP -->
 <section id="leadership">
-  <div class="section-label">Leadership</div>
-  <h2 class="section-title">Making an Impact</h2>
+  <div class="section-label" style="justify-content:center;">Leadership</div>
+  <h2 class="section-title" style="text-align:center;">Making an Impact</h2>
 
+  <div class="leadership-cards-wrap">
   <div class="leadership-card">
     <div class="leadership-icon">⚙️</div>
     <div>
@@ -987,6 +1058,7 @@
       <div class="meta">Theta Tau Engineering Fraternity, Iota Delta Chapter · Jan 2024 – May 2025</div>
       <p>Increased professional development engagement by organizing and leading ~3 workshops per semester. Expanded networking opportunities by collaborating with external organizations to host 4 joint events, attracting 100+ attendees and engaging recruiters from 7 companies.</p>
     </div>
+  </div>
   </div>
 </section>
 
@@ -1021,4 +1093,4 @@
   </p>
   <div class="contact-ctas">
     <a href="/cdn-cgi/l/email-protection#2c4649484d0244025b454040454d415f6c5a4d4248495e4e45405802494859" class="btn-primary">✉ <span class="__cf_email__" data-cfemail="7e141b1a1f50165009171212171f130d3e081f101a1b0c1c17120a501b1a0b">[email&#160;protected]</span></a>
-    <a href="https://www.linkedin.com/in/jedawilliams-2641a
+    <a href="https://www.linkedin.com/in/jedawilliams-2641a"
